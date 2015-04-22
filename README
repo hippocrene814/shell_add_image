@@ -1,0 +1,36 @@
+==========
+HOW TO RUN
+==========
+0/ save images in some folder before, say localFolder
+1/ run command '$chmod +x addImage.sh'
+2/ name your target directory(targetFolder) to push images to, and set wildcard matcher(wc)
+2/ run command '$./addImage.sh localFolder targetFolder wc'
+if you want to return to original state
+4/ run command '$chmod +x rm.sh' and '$./rm.sh targetFolder'
+
+=====
+ABOUT
+=====
+-----------
+addImage.sh
+-----------
+0/ push certain images to device in /sdcard/Pictures/targetFolder
+1/ kick off the media scanner to refresh
+-----
+rm.sh
+-----
+0/ remove folder /sdcard/Pictures/targetFolder and images in it
+
+======
+NOTICE
+======
+example
+$./addImage.sh localImage targetImages '*'
+$./rm.sh targetImages
+
+You can choose files by type or name to push, i.e.
+wc='*.png'
+wc='*.jpg'
+wc='*mario*'
+wc='twitter*'
+
